@@ -1,0 +1,36 @@
+$component-primary-bg: #41504D;
+$primary-content-color: #FFFFFF;
+$secondary-content-color: #41504D;
+$link-color: #EFF2F1;
+$text-color-heading:#308271;
+$banner-bg: #707070;
+$hightlight: #41504D;
+$tab-highlight: #308271;
+$primary-background: #F6F3EB;
+
+
+:root, [data-theme="light"] {
+    --primary-background: #F6F3EB;
+    --card-primary-bg: #FFFFFF;
+    --secondary-content-color: #41504D;
+    --box-color: #EFF2F1;
+    --text-color-heading:#308271;
+    --header-footer-primary-bg: #41504D;
+    --tab-background: #EFF2F1;
+    --tab-highlight: #308271;
+  }
+  
+  [data-theme="dark"] {
+    --primary-background: #1C1D30;
+    --card-primary-bg:#070025;
+    --secondary-content-color: #F6F3EB;
+    --box-color: #34325B;
+    --text-color-heading:#FFFFFF;
+    --header-footer-primary-bg: #070025;
+    --tab-background: #1D193D;
+    --tab-highlight: #34325B;
+  }
+
+
+
+  

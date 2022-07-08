@@ -1,0 +1,27 @@
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideToLeft {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-200px);
+        display: none;
+    }
+}
+
+@keyframes fillFromLeft {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

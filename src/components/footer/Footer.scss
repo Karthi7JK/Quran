@@ -1,0 +1,17 @@
+@import '../../mixins/utils.scss';
+@import '../../mixins/colors.scss';
+@import '../../mixins/animations.scss';
+@import '../../mixins/breakpoints.scss';
+
+.Footer {
+  width: 100%;
+  height: 150px;
+  margin-top: 50px;
+  background: var(--header-footer-primary-bg);
+  @include flex(row,center,center);
+  color: $primary-content-color;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 40px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}

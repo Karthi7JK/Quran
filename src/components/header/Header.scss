@@ -1,0 +1,91 @@
+@import '../../mixins/utils.scss';
+@import '../../mixins/colors.scss';
+@import '../../mixins/animations.scss';
+@import '../../mixins/breakpoints.scss';
+
+.Header {
+  max-width: 100%;
+  min-height: 60px;
+  background: var(--header-footer-primary-bg);
+  @include flex(row);
+  font-family: 'Nunito Sans', sans-serif;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  @include for-tablet-portrait-up {
+    padding: 0 12.5%;
+  }
+  &__Logo {
+    flex: 1.5;
+    color: $primary-content-color;
+    font-size: 20px;
+    margin-left: 50px;
+    @include flex(row,center,flex-start);
+    @include for-tablet-portrait-up {
+      margin-left: 0px;
+    }
+  }
+  &__Nav {
+    flex: 7;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    padding: 20px 15px;
+    border-radius: 2px;
+    &.menuOpen {
+      display: block;
+      animation: slideFromLeft 0.5s ease-in-out;
+    }
+    &.menuClose {
+      animation: slideToLeft 0.5s ease-in-out;
+    }
+    @include for-tablet-portrait-up {
+      position: static;
+      padding: 0;
+      border-radius: 0px;
+      &.menuOpen, &.menuClose {
+        animation:none;
+      }
+    }
+    ul {
+      list-style: none;
+      font-size: 16px;
+      margin: 0;
+      height: 100%;
+      padding: 0;
+      @include for-tablet-portrait-up {
+        display: block;
+        @include flex(row,center,space-between);
+      }
+    }
+    ul li {
+      color: $primary-content-color;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #9fa0a77a;
+      @include for-tablet-portrait-up {
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+    }
+    ul li:hover {
+      cursor: pointer;
+    }
+    ul li > .selected {
+      background: white;
+      animation: fillFromLeft 0.25s ease-in-out;
+      width: 75%;
+      display: block;
+      height: 2px;
+    }
+  }
+  &__Settings {
+    flex: 1.5;
+  }
+  &__Mobile_view {
+    position: fixed;
+    top: 5;
+    left: 0;
+    @include for-tablet-portrait-up {
+      display: none;
+    }
+  }
+}

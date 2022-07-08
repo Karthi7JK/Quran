@@ -1,0 +1,48 @@
+@import '../../mixins/colors.scss';
+@import '../../mixins/utils.scss';
+
+.Chapter {
+    width: 100%;
+    min-height: 85px;
+    &__Content {
+        margin-top: 40px;
+        &__Heading {
+            width: auto;
+            h2 {
+                margin: 0;
+                color: #308271;
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 38px;
+                text-align: justify;
+            }
+            .highlight {
+                width: 60px;
+                height: 2px;
+                background: #308271;
+            }
+        }
+        &__Panel {
+            @include flex(row);
+            margin-top: 50px;
+            &__Left {
+                flex: 1;
+                .MuiBox-root .MuiTabs-root .MuiButtonBase-root-MuiTab-root.Mui-selected {
+                    background-color: transparent;
+                    background: transparent;
+                }
+                .MuiTabs-indicator {
+                    background-color: $tab-highlight;
+                }
+            }
+            &__Right {
+                flex: 1;
+            }  
+        }
+        
+    }
+}
+
+

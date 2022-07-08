@@ -1,0 +1,112 @@
+@import '../../mixins/colors.scss';
+@import '../../mixins/utils.scss';
+
+.marT55 {
+    margin-top: 55px;
+}
+
+.Dashboard {
+    margin-top: 55px;
+    color: var(--secondary-content-color);
+}
+
+.Chapters {
+    height: auto;
+    @include flex(row, flex-start, center);
+    @include card();
+    &__LeftPanel {
+        flex: 1;
+        height: 100%;
+        &__Header {
+            @include flex(row, center, flex-start);
+            * {
+                cursor: pointer;
+            }
+            h2 {
+                margin: 0;
+                color: #308271;
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 38px;
+                text-align: justify;
+                margin-right: 7.5px;
+            }
+        }
+        &__Body {
+            margin-top: 28px;
+            @include flex(row,center, space-between);
+            flex-wrap: wrap;
+        }
+    }
+    &__RightPanel {
+        flex: 1;
+        &__SearchMenu {
+            margin: 0 100px;
+            .tabMenu {
+                width: 100%;
+            }
+            .SearchContainer {
+                margin-top: 25px;
+                .SearchElements {
+                    @include flex(row, center, space-between);
+                }
+            }
+        }
+    }
+}
+
+.About {
+    @include flex(row);
+    height: 383px;
+    border-radius: 5px;
+    &__LeftPanel {
+        @include flex(row);
+        flex:5;
+        height: 100%;
+        background: linear-gradient(318.05deg, #FFFFFF -28.4%, rgba(128, 128, 128, 0.412) 98.61%);
+        background: url('../../images/YTBg.png');
+        z-index: 10;
+        border-radius: 32px;
+        background-position: center;
+    }
+    &__RightPanel {
+        flex:5;
+        height: 100%;
+        position: relative;
+        margin-left: -30px;
+        background: linear-gradient(318.05deg, #010008 -28.4%, rgb(0 4 10) 98.61%);
+        img {
+            width: 70%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.Banner {
+    height: 383px;
+    @include flex(row);
+    @include card();
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 68px;
+    color: $banner-bg;
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+}
+
+
+.MuiBox-root > .MuiTabs-root .css-1aquho2-MuiTabs-indicator {
+    background-color: transparent;
+}
+
+.MuiTabs-root, .MuiTabs-scroller, .MuiTabs-flexContainer {
+    min-height: 0px !important;
+    max-height: 40px;
+}

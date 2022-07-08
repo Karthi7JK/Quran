@@ -1,0 +1,19 @@
+@import '../../mixins/utils.scss';
+.SearchPanel {
+    //@include card();
+    justify-content: space-between;
+    &.fullScreen {
+        * {
+            flex-basis: 16% !important;
+        }
+        .MuiBox-root {
+            flex-basis: 30% !important;
+        }
+    }
+}
+.SearchContainer {
+    margin-top: 25px;
+    .SearchElements {
+        @include flex(row, center, space-between);
+    }
+}
